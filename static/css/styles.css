@@ -233,3 +233,79 @@ footer {
 .project-card a:hover {
     background: #005edb;
 }
+/* Projects Section */
+
+.projects-section{
+    max-width:1100px;
+    margin:60px auto;
+    padding:20px;
+}
+
+.projects-title{
+    font-size:34px;
+    margin-bottom:40px;
+}
+
+/* Grid Layout */
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* Project Card */
+
+.project-card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:all 0.25s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+}
+
+.project-card h2{
+    margin-bottom:10px;
+}
+
+.project-card p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+/* Tech Tags */
+
+.tech{
+    margin-bottom:15px;
+}
+
+.tech span{
+    display:inline-block;
+    background:#eef3ff;
+    color:#2c6bed;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    margin-right:6px;
+}
+
+/* Button */
+
+.project-btn{
+    display:inline-block;
+    padding:8px 16px;
+    background:#2c6bed;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.project-btn:hover{
+    background:#1f4fd6;
+}
