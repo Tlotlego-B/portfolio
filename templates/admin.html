@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard — Messages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+    
+    <!-- Professional Link to Standalone Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="w">
+
+<nav class="topbar">
+  <span class="logo">Edmund <span>Dashboard</span></span>
+  <div class="tnav">
+    <a href="/">← Back to live site</a>
+  </div>
+</nav>
+
+<main class="sec-dark">
+  <div class="shead">
+    <span class="stag">Database</span>
+    <h2 class="stitle">Inbound Connections &amp; Inquiries</h2>
+  </div>
+
+  <div class="msg-container">
+    {% if bookings %}
+      {% for booking in bookings %}
+        <div class="msg-card">
+          <div class="msg-meta">
+            <div class="msg-sender">
+              {{ booking.name }} <span>&lt;{{ booking.email }}&gt;</span>
+            </div>
+            <span class="msg-tag">{{ booking.subject }}</span>
+          </div>
+          <p class="msg-body">{{ booking.message }}</p>
+          <div class="msg-time">Received: {{ booking.timestamp }}</div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="no-msg">No submissions captured yet. Connection streams are clear.</p>
+    {% endif %}
+  </div>
+</main>
+
+<footer class="foot">
+  <span class="flogo">Tlotlego Edmund Baitsiwi</span>
+  <span class="fcopy">© 2026 — IT Control Room</span>
+</footer>
+
+</div>
+</body>
+</html>

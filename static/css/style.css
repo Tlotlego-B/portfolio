@@ -1,0 +1,807 @@
+/* ==========================================================================
+   Tlotlego Edmund Baitsiwi — Portfolio Stylesheet
+   ========================================================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    font-family: 'Space Grotesk', sans-serif;
+    background: #0e0e0e;
+    color: #f0ebe3;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.w a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================================================
+   Navigation Topbar
+   ========================================================================== */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #1f1f1f;
+    background: #0e0e0e;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    color: #f0ebe3;
+}
+
+.logo span {
+    color: #D4A84B;
+}
+
+.tnav {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.tnav a {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #555;
+    transition: color 0.2s;
+}
+
+.tnav a:hover {
+    color: #D4A84B;
+}
+
+.tbtn {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.55rem 1.3rem;
+    background: #D4A84B;
+    color: #0e0e0e;
+    border: none;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.hero-l {
+    padding: 3.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #1a1a1a;
+}
+
+.htag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #D4A84B;
+    margin-bottom: 1rem;
+}
+
+.hh {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    line-height: 0.93;
+    letter-spacing: 0.02em;
+    color: #f0ebe3;
+    margin-bottom: 14rem;
+}
+
+.hh span {
+    color: #D4A84B;
+}
+
+.hp {
+    font-size: 0.88rem;
+    color: #777;
+    max-width: 40ch;
+    margin-bottom: 0.6rem;
+    line-height: 1.7;
+}
+
+.hp2 {
+    font-size: 0.82rem;
+    color: #555;
+    max-width: 40ch;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.hcta {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.8rem 2rem;
+    background: #D4A84B;
+    color: #0e0e0e;
+    border: none;
+    cursor: pointer;
+}
+
+.hcta-ghost {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.78rem 2rem;
+    background: transparent;
+    color: #f0ebe3;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.hcta-ghost:hover {
+    border-color: #D4A84B;
+    color: #D4A84B;
+}
+
+.hero-r {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #111;
+}
+
+.hstat {
+    padding: 2rem 1.5rem;
+    border-right: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.hstat:nth-child(2) { border-right: none; }
+.hstat:nth-child(3) { border-bottom: none; }
+.hstat:nth-child(4) { border-right: none; border-bottom: none; }
+
+.snum {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    color: #D4A84B;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+}
+
+.slbl {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #3a3a3a;
+    margin-top: 0.4rem;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   Sections Global Layout
+   ========================================================================== */
+.sec-dark  { background: #0e0e0e; padding: 3rem 2rem; border-bottom: 1px solid #1a1a1a; }
+.sec-mid   { background: #111; padding: 3rem 2rem; border-bottom: 1px solid #1a1a1a; }
+.sec-deep  { background: #080808; padding: 3rem 2rem; border-bottom: 1px solid #1a1a1a; }
+
+.shead {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    margin-bottom: 2.2rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.stag {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #3a3a3a;
+}
+
+.stitle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+    color: #f0ebe3;
+}
+
+/* ==========================================================================
+   Skills Layout
+   ========================================================================== */
+.skills-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
+}
+
+.mgt {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #D4A84B;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.mr {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #161616;
+}
+
+.mr:last-child {
+    border-bottom: none;
+}
+
+.mn {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #bbb;
+    flex: 1;
+}
+
+.md {
+    flex: 1;
+    border-bottom: 1px dotted #252525;
+    margin-bottom: 2px;
+}
+
+.mtag {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #D4A84B;
+    white-space: nowrap;
+    background: #1a1400;
+    padding: 0.2rem 0.5rem;
+}
+
+.loyalty-bar {
+    margin-top: 2rem;
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    padding: 1.2rem 1.5rem;
+}
+
+.lb-strong {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #f0ebe3;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.2rem;
+}
+
+.lb-sub {
+    font-size: 0.76rem;
+    color: #555;
+}
+
+/* ==========================================================================
+   Credentials & Certifications Section
+   ========================================================================== */
+.cred-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cred-card {
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cred-card:hover {
+    border-color: #D4A84B;
+}
+
+.cred-icon {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    opacity: 0.7;
+}
+
+.cred-info h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f0ebe3;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.cred-info p {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.cred-download {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #D4A84B;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+    margin-top: auto;
+}
+
+.cred-download span {
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.cred-download:hover span {
+    transform: translate(2px, -2px);
+}
+
+.cred-download[download]:hover span {
+    transform: translateY(2px);
+}
+
+/* ==========================================================================
+   Projects Grid Framework
+   ========================================================================== */
+.pgrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 3px;
+}
+
+.pc {
+    background: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.8rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 180px;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 1px solid #141414;
+}
+
+.pc:first-child {
+    grid-row: 1/3;
+    min-height: 0;
+}
+
+.pc:hover {
+    background: #121212;
+}
+
+.pc-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.pc-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    color: #f0ebe3;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.pc-desc {
+    font-size: 0.76rem;
+    color: #555;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+    max-width: 40ch;
+}
+
+.pc-tags {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.pc-tag {
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #D4A84B;
+    background: #1a1400;
+    padding: 0.2rem 0.45rem;
+}
+
+.pc-link {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #555;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.2s;
+}
+
+.pc-link:hover {
+    color: #D4A84B;
+}
+
+.pc-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #D4A84B;
+    background: #0e0e0e;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid #1a1400;
+}
+
+/* ==========================================================================
+   Contact Section & Layout
+   ========================================================================== */
+.cgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.clbl {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #3a3a3a;
+    margin-bottom: 0.25rem;
+}
+
+.cval {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+    line-height: 1.55;
+}
+
+.cval a {
+    color: #D4A84B;
+}
+
+.cval a:hover {
+    text-decoration: underline;
+}
+
+.social-row {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border: 1px solid #222;
+    color: #555;
+    transition: all 0.2s;
+}
+
+.social-btn:hover {
+    border-color: #D4A84B;
+    color: #D4A84B;
+}
+
+/* ==========================================================================
+   Contact Form Framework
+   ========================================================================== */
+.fw {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.fl {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #3a3a3a;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.fi, .fs, .ft {
+    width: 100%;
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    color: #f0ebe3;
+    padding: 0.6rem 0.75rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+    border-radius: 0;
+}
+
+.fi::placeholder, .ft::placeholder {
+    color: #2a2a2a;
+}
+
+.fi:focus, .fs:focus, .ft:focus {
+    border-color: #D4A84B;
+}
+
+.fs option {
+    background: #0a0a0a;
+}
+
+.ft {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.frow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.fsub {
+    width: 100%;
+    background: #D4A84B;
+    color: #0e0e0e;
+    border: none;
+    padding: 0.82rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 0.3rem;
+}
+
+/* ==========================================================================
+   Footer Component
+   ========================================================================== */
+.foot {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #050505;
+    border-top: 1px solid #161616;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.flogo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    color: #666;
+}
+
+.fcopy {
+    font-size: 0.72rem;
+    color: #666;
+    letter-spacing: 0.03em;
+}
+
+.fcopy strong {
+    color: #D4A84B;
+    font-weight: 600;
+}
+
+.flinks {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.flinks a {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #555;
+    transition: all 0.25s ease;
+}
+
+.flinks a:hover {
+    color: #D4A84B;
+}
+
+/* ==========================================================================
+   Admin Dashboard Additions
+   ========================================================================== */
+.msg-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.msg-card {
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.msg-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #161616;
+}
+
+.msg-sender {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #f0ebe3;
+}
+
+.msg-sender span {
+    font-weight: 400;
+    color: #555;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+.msg-tag {
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #D4A84B;
+    background: #1a1400;
+    padding: 0.2rem 0.45rem;
+}
+
+.msg-body {
+    font-size: 0.85rem;
+    color: #bbb;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.msg-time {
+    font-size: 0.65rem;
+    color: #3a3a3a;
+    margin-top: 1rem;
+    text-align: right;
+    letter-spacing: 0.05em;
+}
+
+.no-msg {
+    text-align: center;
+    color: #555;
+    padding: 4rem 0;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints & Media Queries
+   ========================================================================== */
+@media (max-width: 900px) {
+    /* Top Navigation Adaptation */
+    .topbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    .tnav {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero Responsive Grid Shift */
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-l {
+        border-right: none;
+        border-bottom: 1px solid #1a1a1a;
+        padding: 4rem 1.5rem;
+    }
+    
+    .hh {
+        margin-bottom: 4rem;
+    }
+
+    /* Skills Grid Stack */
+    .skills-cols {
+        grid-template-columns: 1fr;
+        gap: 2rem 0;
+    }
+
+    /* Projects Grid Stack */
+    .pgrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .pc:first-child {
+        grid-row: auto;
+    }
+
+    /* Contact Block Stack */
+    .cgrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    /* Footer Centerment */
+    .foot {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .flinks {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tlotlego Edmund Baitsiwi — IT Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="w">
+
+<nav class="topbar" role="navigation" aria-label="Main navigation">
+  <span class="logo">Edmund <span>B.</span></span>
+  
+  <div class="tnav">
+    <a href="#skills">Skills</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+  
+  <a class="tbtn" href="#contact">Let's connect</a>
+</nav>
+
+<main>
+
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-l">
+    <p class="htag">ICT Student &mdash; Cybersecurity &bull; Networking &bull; Dev</p>
+    <h1 class="hh" id="hero-heading">Tlotlego<br/>Edmund<br/><span>Baitsiwi.</span></h1>
+    <p class="hp">Python tools. Network designs. Web apps. Built to actually work.</p>
+    <p class="hp2">ICT student at CPUT — passionate about cybersecurity, backend systems, and building things that solve real problems.</p>
+    <div class="hero-btns">
+      <a class="hcta" href="#projects">View my work</a>
+      <a class="hcta-ghost" href="https://github.com/Tlotlego-B" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+  <div class="hero-r" aria-label="At a glance">
+    <div class="hstat"><div class="snum">Python<br/>&amp; Java</div><div class="slbl">Core languages</div></div>
+    <div class="hstat"><div class="snum">Cyber &amp;<br/>Networks</div><div class="slbl">Specialisation</div></div>
+    <div class="hstat"><div class="snum">4</div><div class="slbl">Live projects on GitHub</div></div>
+    <div class="hstat"><div class="snum">ICT<br/>Diploma</div><div class="slbl">Communication Networks — CPUT</div></div>
+  </div>
+</section>
+
+<section class="sec-dark" id="skills" aria-labelledby="skills-heading">
+  <div class="shead"><span class="stag">What I work with</span><h2 class="stitle" id="skills-heading">Skills & Technologies</h2></div>
+  <div class="skills-cols">
+    <div>
+      <p class="mgt">Development</p>
+      <div class="mr"><span class="mn">Python</span><span class="md"></span><span class="mtag">Scripting &amp; Tools</span></div>
+      <div class="mr"><span class="mn">Flask</span><span class="md"></span><span class="mtag">Web Apps</span></div>
+      <div class="mr"><span class="mn">Java</span><span class="md"></span><span class="mtag">Learning</span></div>
+      <div class="mr"><span class="mn">HTML &amp; CSS</span><span class="md"></span><span class="mtag">Frontend</span></div>
+      <div class="mr"><span class="mn">SQLite / MongoDB</span><span class="md"></span><span class="mtag">Databases</span></div>
+    </div>
+    <div>
+      <p class="mgt">Infrastructure & Security</p>
+      <div class="mr"><span class="mn">Cybersecurity</span><span class="md"></span><span class="mtag">Fundamentals</span></div>
+      <div class="mr"><span class="mn">Networking</span><span class="md"></span><span class="mtag">TCP/IP, DNS, DHCP</span></div>
+      <div class="mr"><span class="mn">Socket Programming</span><span class="md"></span><span class="mtag">Python</span></div>
+      <div class="mr"><span class="mn">Git &amp; GitHub</span><span class="md"></span><span class="mtag">Version Control</span></div>
+    </div>
+  </div>
+  <div class="loyalty-bar" role="note">
+    <span class="lb-strong">Continuous learning — every new skill builds on the last.</span>
+    <span class="lb-sub">Currently studying at CPUT. Always building. Always improving.</span>
+  </div>
+</section>
+
+<section class="sec-mid" id="credentials" aria-labelledby="credentials-heading">
+  <div class="shead">
+    <span class="stag">Verified Skills</span>
+    <h2 class="stitle" id="credentials-heading">CV &amp; Certifications</h2>
+  </div>
+
+  <div class="cred-grid">
+    <div class="cred-card" role="article">
+      <div class="cred-icon">📄</div>
+      <div class="cred-info">
+        <h3>Curriculum Vitae</h3>
+        <p>Detailed overview of my academic background at CPUT, technical competencies, and project history.</p>
+      </div>
+      <a class="cred-download" href="{{ url_for('static', filename='docs/Curriculum_Vitae.pdf') }}" download>
+        Download CV <span>↓</span>
+      </a>
+    </div>
+
+    <div class="cred-card" role="article">
+      <div class="cred-icon">🛡️</div>
+      <div class="cred-info">
+        <h3>Cisco Packet Tracer</h3>
+        <p>Issued by Cisco Networking Academy. Verified proficiency in network configuration, simulation, and routing protocols.</p>
+      </div>
+      <a class="cred-download" href="{{ url_for('static', filename='docs/Getting_Started_with_Cisco_Packet_Tracer_certificate.pdf') }}" target="_blank" rel="noopener">
+        View Certificate <span>↗</span>
+      </a>
+    </div>
+
+    <div class="cred-card" role="article">
+      <div class="cred-icon">🔐</div>
+      <div class="cred-info">
+        <h3>Introduction to Cybersecurity</h3>
+        <p>Issued by Cisco Networking Academy. Validated foundational knowledge in threat landscapes, vulnerability assessment, and security defenses.</p>
+      </div>
+      <a class="cred-download" href="{{ url_for('static', filename='docs/Introduction_to_Cybersecurity_certificate.pdf') }}" target="_blank" rel="noopener">
+        View Certificate <span>↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-deep" id="projects" aria-labelledby="projects-heading">
+  <div class="shead"><span class="stag">The work</span><h2 class="stitle" id="projects-heading">Projects</h2></div>
+  <div class="pgrid">
+    <div class="pc" role="article" aria-label="NavalCode — featured project">
+      <span class="pc-badge">Featured</span>
+      <div class="pc-icon">⚓</div>
+      <div class="pc-name">NavalCode</div>
+      <p class="pc-desc">AI-powered codebase assistant built with Java and Python. Search project files, understand code structure, and analyze repositories directly from the CLI environment.</p>
+      <div class="pc-tags"><span class="pc-tag">Java</span><span class="pc-tag">Python</span><span class="pc-tag">CLI</span><span class="pc-tag">AI</span></div>
+      <a class="pc-link" href="https://github.com/Tlotlego-B/NavalCode" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+    <div class="pc" role="article" aria-label="PhishGuard SA project">
+      <div class="pc-icon">🛡️</div>
+      <div class="pc-name">PhishGuard SA</div>
+      <p class="pc-desc">Cybersecurity awareness and detection utility targeted at identifying phishing signatures and indicators within local environments.</p>
+      <div class="pc-tags"><span class="pc-tag">Python</span><span class="pc-tag">Security</span><span class="pc-tag">Analysis</span></div>
+      <a class="pc-link" href="https://github.com/Tlotlego-B/phishguard-sa" target="_blank" rel="noopener">View code ↗</a>
+    </div>
+    <div class="pc" role="article" aria-label="Port Scanner project">
+      <div class="pc-icon">🌐</div>
+      <div class="pc-name">Port Scanner</div>
+      <p class="pc-desc">Robust TCP port scanner utilizing native socket programming to discover open ports, map exposed vectors, and evaluate host service states.</p>
+      <div class="pc-tags"><span class="pc-tag">Python</span><span class="pc-tag">Sockets</span><span class="pc-tag">Security</span></div>
+      <a class="pc-link" href="https://github.com/Tlotlego-B/python-port-scanner" target="_blank" rel="noopener">View code ↗</a>
+    </div>
+    <div class="pc" role="article" aria-label="Password Strength Checker project">
+      <div class="pc-icon">🔐</div>
+      <div class="pc-name">Password Checker</div>
+      <p class="pc-desc">Security evaluator using regex scanning and lexical rulesets to process credentials and report structural complexity metrics.</p>
+      <div class="pc-tags"><span class="pc-tag">Python</span><span class="pc-tag">Regex</span><span class="pc-tag">Security</span></div>
+      <a class="pc-link" href="https://github.com/Tlotlego-B/python-password-checker" target="_blank" rel="noopener">View code ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec-mid" id="contact" aria-labelledby="contact-heading">
+  <div class="shead"><span class="stag">Get in touch</span><h2 class="stitle" id="contact-heading">Let's Connect</h2></div>
+  <div class="cgrid">
+    <div>
+      <p class="clbl">Email</p>
+      <p class="cval"><a href="mailto:tebaitsiwi@gmail.com">tebaitsiwi@gmail.com</a></p>
+      <p class="clbl">Phone</p>
+      <p class="cval"><a href="tel:+27697631945">+27 69 763 1945</a></p>
+      <p class="clbl">LinkedIn</p>
+      <p class="cval"><a href="https://www.linkedin.com/in/tlotlego-edmund-baitsiwi-a37437376" target="_blank" rel="noopener">Tlotlego Edmund Baitsiwi ↗</a></p>
+      <p class="clbl">GitHub</p>
+      <p class="cval"><a href="https://github.com/Tlotlego-B" target="_blank" rel="noopener">github.com/Tlotlego-B ↗</a></p>
+      <p class="clbl">Based in</p>
+      <p class="cval">Cape Town, South Africa<br/>Open to remote & on-site opportunities</p>
+      <div class="social-row">
+        <a class="social-btn" href="https://github.com/Tlotlego-B" target="_blank" rel="noopener">GitHub</a>
+        <a class="social-btn" href="https://www.linkedin.com/in/tlotlego-edmund-baitsiwi-a37437376" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    
+    <form class="fw" action="/book" method="POST">
+      <div class="frow">
+        <div>
+            <label class="fl" for="f-name">Name</label>
+            <input class="fi" id="f-name" name="name" type="text" placeholder="Who am I speaking to?" required />
+        </div>
+        <div>
+            <label class="fl" for="f-email">Email</label>
+            <input class="fi" id="f-email" name="email" type="email" placeholder="I'll reply here" required />
+        </div>
+      </div>
+      <div>
+        <label class="fl" for="f-subject">Subject</label>
+        <select class="fs" id="f-subject" name="subject" required>
+          <option value="">What's this about?</option>
+          <option value="Job opportunity">Job opportunity</option>
+          <option value="Freelance project">Freelance project</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Cybersecurity work">Cybersecurity work</option>
+          <option value="Networking project">Networking project</option>
+          <option value="Just saying hi">Just saying hi</option>
+        </select>
+      </div>
+      <div>
+        <label class="fl" for="f-msg">Message</label>
+        <textarea class="ft" id="f-msg" name="message" placeholder="Tell me what you're working on — I'm listening." required></textarea>
+      </div>
+      <button class="fsub" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot" role="contentinfo">
+    <span class="flogo">Tlotlego Edmund Baitsiwi</span>
+    <span class="fcopy">© 2026 All Rights Reserved</span>
+    <span class="fcopy">Designed &amp; Developed by <strong>Edmund Tech Studio</strong></span>
+    <div class="flinks">
+        <a href="https://github.com/Tlotlego-B" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/tlotlego-edmund-baitsiwi-a37437376" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+</footer>
+
+</div>
+</body>
+</html>

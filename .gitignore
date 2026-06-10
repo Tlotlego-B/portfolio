@@ -1,0 +1,29 @@
+# ==========================================================================
+# Git Ignore Configuration — Tlotlego Edmund Baitsiwi
+# ==========================================================================
+
+# 1. Databases & Security 
+# Never upload active client submissions or tracking databases to public GitHub repos
+bookings.db
+instance/
+
+# 2. Python Environment 
+# Keeps your local virtual environment out of your clean codebase
+venv/
+env/
+ENV/
+.env
+
+# 3. Python Cache & Build Artifacts
+# Automatically generated runtime caches that aren't part of your project code
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# 4. OS Specific Files
+# Prevents background layout caches from creeping in
+.DS_Store
+Thumbs.dbvenv/ 
+*.pyc 
