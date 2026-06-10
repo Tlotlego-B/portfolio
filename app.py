@@ -1,10 +1,14 @@
 from flask import Flask, render_template, request, redirect
 import sqlite3
+import os
 
-app = Flask(__name__)
+# If running on Vercel, save the database to the writable /tmp directory
+if os.environ.get('VERCEL'):
+    DB_NAME = '/tmp/bookings.db'
+else:
+    DB_NAME = 'bookings.db' # Keeps it local for your computer
 
-DB_NAME = "bookings.db"
-
+app = Flask(__name__) 
 
 def init_db():
     with sqlite3.connect(DB_NAME) as conn:
@@ -21,14 +25,11 @@ def init_db():
         """)
         conn.commit()
 
-
 init_db()
-
 
 @app.route("/")
 def home():
     return render_template("index.html")
-
 
 @app.route("/book", methods=["POST"])
 def book():
@@ -50,7 +51,6 @@ def book():
 
     return redirect("/")
 
-
 @app.route("/admin")
 def admin():
     with sqlite3.connect(DB_NAME) as conn:
@@ -60,7 +60,6 @@ def admin():
         rows = c.fetchall()
 
     return render_template("admin.html", bookings=rows)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
