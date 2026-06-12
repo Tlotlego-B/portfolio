@@ -71,6 +71,10 @@ def admin():
 def google_verify():
     return send_from_directory('.', 'googlef09145e424d6740b.html')
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('.', 'sitemap.xml', mimetype='application/xml')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
