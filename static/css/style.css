@@ -805,3 +805,68 @@
         justify-content: center;
     }
 }
+/* ==========================================================================
+   Qualifications & Education Section
+   ========================================================================== */
+.qual-card {
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    padding: 1.5rem;
+}
+
+.qual-year {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #D4A84B;
+    margin-bottom: 0.8rem;
+}
+
+.qual-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.04em;
+    color: #D4A84B;
+    margin-bottom: 0.8rem;
+}
+
+.qual-school {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.qual-desc {
+    color: #666;
+    max-width: 60ch;
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   Career Objective
+   ========================================================================== */
+
+.objective-card {
+    background: #0a0a0a;
+    border: 1px solid #1f1f1f;
+    padding: 2rem;
+    max-width: 900px;
+    transition: border-color 0.25s ease;
+}
+
+.objective-card:hover {
+    border-color: #D4A84B;
+}
+
+.objective-card p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #666;
+    max-width: 75ch;
+}
+
+.objective-highlight {
+    color: #D4A84B;
+    font-weight: 700;
+}
