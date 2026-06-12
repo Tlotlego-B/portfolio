@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, send_from_directory
 import sqlite3
 import os
 
@@ -63,3 +63,7 @@ def admin():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+@app.route('/googlef09145e424d6740b.html')
+def google_verify():
+    return send_from_directory('.', 'googlef09145e424d6740b.html')
