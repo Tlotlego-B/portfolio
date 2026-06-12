@@ -6,9 +6,10 @@ import os
 if os.environ.get('VERCEL'):
     DB_NAME = '/tmp/bookings.db'
 else:
-    DB_NAME = 'bookings.db' # Keeps it local for your computer
+    DB_NAME = 'bookings.db'  # Keeps it local for your computer
 
-app = Flask(__name__) 
+app = Flask(__name__)
+
 
 def init_db():
     with sqlite3.connect(DB_NAME) as conn:
@@ -25,18 +26,21 @@ def init_db():
         """)
         conn.commit()
 
+
 init_db()
+
 
 @app.route("/")
 def home():
     return render_template("index.html")
 
+
 @app.route("/book", methods=["POST"])
 def book():
-    name = request.form.get("name")
-    email = request.form.get("email")
-    subject = request.form.get("subject")
-    message = request.form.get("message")
+    name = request.form.get("name", "").strip()
+    email = request.form.get("email", "").strip()
+    subject = request.form.get("subject", "").strip()
+    message = request.form.get("message", "").strip()
 
     if not all([name, email, subject, message]):
         return "Missing fields", 400
@@ -51,6 +55,7 @@ def book():
 
     return redirect("/")
 
+
 @app.route("/admin")
 def admin():
     with sqlite3.connect(DB_NAME) as conn:
@@ -61,9 +66,11 @@ def admin():
 
     return render_template("admin.html", bookings=rows)
 
-if __name__ == "__main__":
-    app.run(debug=True)
 
 @app.route('/googlef09145e424d6740b.html')
 def google_verify():
     return send_from_directory('.', 'googlef09145e424d6740b.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
